@@ -1,4 +1,6 @@
-##Viikkoraportti // *viikko 1*
+Viikkoraportti 
 ==============================
+###*viikko 1 // 19.12*
+
 
 TBA
