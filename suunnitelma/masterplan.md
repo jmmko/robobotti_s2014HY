@@ -15,7 +15,7 @@ Silloin kun olen suorittanut ohjelmointikurssit, Git ei ollut olemassa. En ole *
 
 **Työntekemiseen käytettävissä oleva aika**
 
-Olen 1-vuotiaan Hertta tyttären isä. Tämä tarkoittaa, että arjessa aikaa varsinkin joulun tienoilla on käytettävissä rajallisesti. Legorobotin rakentaminen samaan aikaan pienen lapsen kanssa on mahdotonta (lue: lapsi syö osat). Lisäksi 7.1. aloitamme päiväkotiin tutustumisen jolloin joudun olemaan demopäivinä päiväkodissa tyttären kanssa. Tästä on sovittava ohjaajien kanssa. Uskon kuitenkin, että aika riittää ja saan toimivan robotin kunhan vaan pidättäydyn tekemästä mitään liian vaativaa.
+Olen 1-vuotiaan Hertta tyttären isä. Tämä tarkoittaa, että arjessa aikaa varsinkin joulun tienoilla on käytettävissä rajallisesti. Legorobotin rakentaminen samaan aikaan pienen lapsen kanssa on mahdotonta (lue: lapsi syö osat). Lisäksi 7.1. aloitamme päiväkotiin tutustumisen jolloin joudun olemaan demopäivinä päiväkodissa tyttären kanssa. Tästä on sovittava ohjaajien kanssa. Uskon kuitenkin, että aika riittää ja saan toimivan robotin kunhan vaan pidättäydyn tekemästä mitään liian vaativaa. Lähden ensisijaisesti tavoittelemaan toimivan robotin tekemistä, ts. kurssin läpipääsyä. Aikataulu on erittäin haasteellinen.
 
 - [x] *Kalenteri kuntoon kurssin osalta*
 - [ ] *Sovi ohjaajien kanssa demopäivistä*
@@ -26,4 +26,10 @@ Olen 1-vuotiaan Hertta tyttären isä. Tämä tarkoittaa, että arjessa aikaa va
 
 1. Kahdella pyörällä itseään pystyssäpitävä *segway* tyylinen robotti.
 2. Toisena ominaisuutena robotti liikkuu äänikomennoilla (eteen / taakse).
-3. Mahdollisesti tunnistaa esteen ja pysähtyy esim. 30 cm ennen estettä. 
+3. Mahdollisesti tunnistaa esteen ja pysähtyy esim. 30 cm ennen estettä.
+
+**Ideoiden toteutus**
+
+1. Koska käytettävissä ei ole gyroskooppia tms. käytetään xxx anturia mittaamaan etäisyyttä lattiasta ja näin säätämään moottoreita johon pyörät on liitetty.
+2. Liitetaan moottorilla paino NXT yksikön yläpuolelle. Kun paino nojaa eteenpäin -> liikutaan eteen. Taaksepäin vastaavasti. NXT äänianturi tunnistaa vain äänenpainetta. Ehkä äänikomennot voi olla taputuksia tai fiksusti valittuja sanoja joissa tietyt konsonantit muodostavat ns. "sound pattern":ja. **TAI** bluetoothin kautta yhdistetty kauko-ohjain jolla painon siirtymistä ohjataan.
+3. Etäisyysanturi...
