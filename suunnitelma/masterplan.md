@@ -40,4 +40,6 @@ Yksi rajoittava tekijä robotin suunnittelussa ja rakentamisessa on saamani laat
 
 Lähden ensin toteuttamaan ideaa 1. Jos saan robotin pysymään tasapainossa, yritän lisätä ominaisuuden 2. Lisänä jos jää aikaa yritän saada sen automaattisesti pysähtymään esteen tullessa eteen. Robotti on siis toimiva, vaikka saisin vain kohdan 1. toimimaan.
 
+Robottiin tulee toteuttaa myös ns. *"kill-switch"*. Tämän toteutan kosketussensorin avulla. Sen voisi toisaalta asemoida myös niin, että jos robotti ei pysy pystyssä, se myös pysäyttää robotin toiminnan.
+
 Tätä suunnitteludokumenttia tullaan päivittämään aina tarpeen tullen uusien ideoiden tai muuttuneiden suunnitelmien vuoksi.

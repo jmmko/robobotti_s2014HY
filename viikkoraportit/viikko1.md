@@ -10,3 +10,7 @@ Aloitin suunnitelmien pohjalta robotin rakenteen suunnittelun. Rakensin ensin ka
 Robotin täytyy olla mahdollisimman tasapainossa ja valoanturin mahdollisimman lähellä maata. Rakentelin robottia. Kiinnitin kaksi moottoria nxt runkoon. Etenen pala kerrallaan kokeillen hyviä ratkaisuja. Tarvitaan vielä jonkin verran technics palojen liittämistä - irroittamista - ja taas liittämistä, ennenkuin järkevä prototyyppi on valmis.
 
 Lähden ensin vain siitä ajatuksesta, että saan robotin pysymään tasapainossa. Aloitin kuitenkin rakentamisen siltä pohjalta, että liitän jo tässä vaiheessa myös ääni- ja ultraäänisensorit. Jos tarvitsen niitä lisäominaisuuksien toteuttamiseen, voi niitä olla vaikea lisätä järkevästi enää myöhemmässä vaiheessa.
+
+Robotin rakentelu jatkuu. Robotti vaikuttaa hyvin yläpainoiselta, joka saattaa vaikuttaa lopputulokseen. Yksi huolenaihe on, että moottoreissa on aika paljon klappia (löysää) ja ne liikkuu vähän holtittomasti. Onkohan tämä edes teknisesti mahdollista tehdä? Alkoi hieman epäilyttää. Täytyy nyt alustavasti saada mahdollisimman pian, jo ensi viikolla, toimiva prototyyppi.
+
+Latasin RojbOS (Jouko Strömmerin kasaama linux distro). En aio käyttää virtualboxia. Asennan sen tikulle ja boottaan sitä kautta. Viikonlopun aikana tutustun enemmän tähän ohjelmointi ympäristöön.
