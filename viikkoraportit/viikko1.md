@@ -20,4 +20,6 @@ Latasin RojbOS (Jouko Strömmerin kasaama linux distro). En aio käyttää virtu
 
 Jouduin muuttamaan hieman robon peruskonstruktiota, sillä tajusin, että patteriluukku olisi ihan kiva saada auki ilman, että robottia täytyy purkaa puoliksi. Lisäksi päätin laittaa NXT brickin vakaan enkä pystyyn. Tämä voisi auttaa painopisteen saamiseksi vielä alemmas. Rakentelua, purkamista, funtsimista ja taas rakentelua. Kyllä se tästä. Perjantai iltaan mennessä jonkinlainen alku saatu aikaan.
 
-Viikonlopun aikana alan miettiä alustavasti koodipuolta, sillä se tulee olemaan itselleni lähtökohtista katsoen se ehdottomasti hankalin puoli.  
+Viikonlopun aikana alan miettiä alustavasti koodipuolta, sillä se tulee olemaan itselleni lähtökohtista katsoen se ehdottomasti hankalin puoli.
+
+Githubissa muokkailin vielä asetuksia. Olin laittanut repon *yksityiseksi*, no eihän se näkynyt ilman kirjautumista. En tiedä olisiko näkynyt jos olisin kirjautunut jollakin muulla tunnuksella. Nyt repo on kuitenkin *public* . Lisäksi päätin kokeilla *branch* sta. Olisin toki voinut tehdä commitit master branchiin, mutta kun opettelen samalla käyttää GitHubia ihan hauska ja opettavaista kokeilla kaikkia ominaisuuksia. GitHub vaikuttaa kyllä aivan erinomaiselta työkalulta. Eipä ihme, että on niin suosittu. Hienoa, että se on nyt itselläkin hallussa. 
