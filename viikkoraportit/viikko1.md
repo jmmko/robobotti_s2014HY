@@ -1,5 +1,6 @@
 Viikko 1 // 19.12
 =================
+***Keskiviikko - Torstai***
 
 Lähdin opiskelemaan ihan alkajaisiksi miten Git ja GitHub toimivat. Ne olivat itselleni aivan uusia asioita. Sillä kun aloitin opiskelut vuonna 2002 ja suoritin samana lukukautena java-ohjelmointi kurssit, ei Git ollut silloin vielä edes olemassa. Ja jos olikin, ei käytössä. Otin Gitin haltuun yhden illan aikana ja sain hommat toimimaan, tämäkin raportin kirjoittaminen onnistui siis helposti omalta kotikoneelta GitHup for mac ja atom-editorin avulla.
 
@@ -11,6 +12,12 @@ Robotin täytyy olla mahdollisimman tasapainossa ja valoanturin mahdollisimman l
 
 Lähden ensin vain siitä ajatuksesta, että saan robotin pysymään tasapainossa. Aloitin kuitenkin rakentamisen siltä pohjalta, että liitän jo tässä vaiheessa myös ääni- ja ultraäänisensorit. Jos tarvitsen niitä lisäominaisuuksien toteuttamiseen, voi niitä olla vaikea lisätä järkevästi enää myöhemmässä vaiheessa.
 
-Robotin rakentelu jatkuu. Robotti vaikuttaa hyvin yläpainoiselta, joka saattaa vaikuttaa lopputulokseen. Yksi huolenaihe on, että moottoreissa on aika paljon klappia (löysää) ja ne liikkuu vähän holtittomasti. Onkohan tämä edes teknisesti mahdollista tehdä? Alkoi hieman epäilyttää. Täytyy nyt alustavasti saada mahdollisimman pian, jo ensi viikolla, toimiva prototyyppi.
+***Perjantai***
 
-Latasin RojbOS (Jouko Strömmerin kasaama linux distro). En aio käyttää virtualboxia. Asennan sen tikulle ja boottaan sitä kautta. Viikonlopun aikana tutustun enemmän tähän ohjelmointi ympäristöön.
+Robotin rakentelu jatkuu. Robotti vaikuttaa hyvin yläpainoiselta, joka saattaa vaikuttaa lopputulokseen. Yksi huolenaihe on, että moottoreissa on aika paljon klappia (löysää) ja ne liikkuu vähän holtittomasti. Onkohan tämä edes teknisesti mahdollista tehdä? Alkoi hieman epäilyttää. Täytyy nyt alustavasti saada mahdollisimman pian, jo heti alku iikolla, toimiva prototyyppi.
+
+Latasin RojbOS (Jouko Strömmerin kasaama linux distro). En aio käyttää virtualboxia. Asennan sen tikulle ja boottaan sitä kautta. Viikonlopun aikana tutustun enemmän tähän ohjelmointiympäristöön. Jostain syystä en saanut perjantai päivän aikana MacMiniä boottaamaan usb tikulta. Kaikki tiedosto on kyllä tikulla, mutta jostain syystä bootmanageri ei sitä löydä. Täytyy säätää lisää vielä tämän perjantai illan aikana.
+
+Jouduin muuttamaan hieman robon peruskonstruktiota, sillä tajusin, että patteriluukku olisi ihan kiva saada auki ilman, että robottia täytyy purkaa puoliksi. Lisäksi päätin laittaa NXT brickin vakaan enkä pystyyn. Tämä voisi auttaa painopisteen saamiseksi vielä alemmas. Rakentelua, purkamista, funtsimista ja taas rakentelua. Kyllä se tästä. Perjantai iltaan mennessä jonkinlainen alku saatu aikaan.
+
+Viikonlopun aikana alan miettiä alustavasti koodipuolta, sillä se tulee olemaan itselleni lähtökohtista katsoen se ehdottomasti hankalin puoli.  
