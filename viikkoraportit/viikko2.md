@@ -1,4 +1,4 @@
-Viikko 2 // 19.12 *(deadline)*
+Viikko 2 // 28.12 *(deadline)*
 =================
 ***Lauantai***
 
@@ -9,3 +9,9 @@ Linux distro saatu pyörimään hyvin ja asentelin vielä Lejos pluginin, jolloi
 Koko lauantai-ilta meni NXT brickin herättämisessä takaisin eloon. Halusin päivittää firmwaren, mutta usb yhteys katkesi kesken ja sain sen ns. "clicking NXT brick syndrome". Virtualbox ei enää tunnistanut usb yhteyttä brickistä. Se jäi toisin sanoen firmwaren päivitys tilaan odottamaan latausta, mutta tätä en pystynyt tietysti tekemään. Noin 3 tuntia aktiivista netin lukua ja lopuksi apuun kurssin IRC kanava. Sieltä löytyin apu nopeasti. Tosin en tiedä miten virtualbox sitten viimein tunnisti brickin, irc maaginen vaikutus (?), mutta sain usb tunnistettua ja Lejos flash työkalulla uuden firmiksen brickiin. Se elää!
 
 Jatkoin kokeilua eclipsellä. Sain HelloWorld ohjelman siirrettyä NXT:lle. Toimii, mutta tästä on kyllä todella pitkä matka johonkin järkevään ja toimivaan. Lejos paketissa oli oivallinen testi kontrolli ohjelma jolla testailin, että moottorit pyörivät. Jatketaan tästä.
+
+***Sunnuntai - Tiistai***
+
+Virtualboxin, Eclipsen, Lejos palikoiden opiskelua/säätöä. Lisäksi Javan kertausta ohjelmoinnin perusteiden ja jatkokurssin materiaaleista. Robotin purkua ja uudelleen rakentelua. Peruskonstruktio alkaa olla pian valmis. Valo- ja äänianturi on jo paikallaan. Lisäksi hätäpysäytys nappi on alustavasti laitettu NXT brickin päälle.
+
+Seuraavaksi tarkoitus tutkia millaista dataa valoanturilta saa ja mikä olisi suunnilleen sopiva arvo kun robotti on balanssissa.
