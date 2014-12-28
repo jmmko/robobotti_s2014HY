@@ -10,8 +10,20 @@ Koko lauantai-ilta meni NXT brickin herättämisessä takaisin eloon. Halusin p�
 
 Jatkoin kokeilua eclipsellä. Sain HelloWorld ohjelman siirrettyä NXT:lle. Toimii, mutta tästä on kyllä todella pitkä matka johonkin järkevään ja toimivaan. Lejos paketissa oli oivallinen testi kontrolli ohjelma jolla testailin, että moottorit pyörivät. Jatketaan tästä.
 
-***Sunnuntai - Tiistai***
+***Sunnuntai - Keskiviikko***
 
 Virtualboxin, Eclipsen, Lejos palikoiden opiskelua/säätöä. Lisäksi Javan kertausta ohjelmoinnin perusteiden ja jatkokurssin materiaaleista. Robotin purkua ja uudelleen rakentelua. Peruskonstruktio alkaa olla pian valmis. Valo- ja äänianturi on jo paikallaan. Lisäksi hätäpysäytys nappi on alustavasti laitettu NXT brickin päälle.
 
 Seuraavaksi tarkoitus tutkia millaista dataa valoanturilta saa ja mikä olisi suunnilleen sopiva arvo kun robotti on balanssissa.
+
+Ihmettelyä millä idealla lähtisin koodia toteuttamaan. Pitkällisen tiedonhaun perusteella *PID säädin* on se millä tätä kannattaisi alkaa toteuttamaan. Siis PID säätimen idea on laskea "virhettä" syötteen ja annetun halutun arvon välillä. Säädin, *(siis robotti)*, yrittää pitää virheen mahdollisimman pienenä säätämällä tulostetta.
+
+BalanssiBotin tapauksessa siis virhe muodostuu erotuksesta mitä saadaan valoanturilta ja mikä on haluttu arvo eli milloin botti on tasapainossa. Aina kun valoanturilta tuleva data muuttuu *(kauemmas vs. lähemmäs / suurempi vs. pienempi)* siis virhe muuttuu verrattaessa haluttuun arvoon, yrittää robotti korjata tulostetta (ts. pitää virheen minimissä) eli tässä tapauksessa moottoreita eteen tai taakse liikuttamalla.
+
+Alustavaa ideaa koodille siis keksittynä. Muutamia HelloWorld tyylisiä testi ohjelmia ajettu ja testattu, että anturi antaa dataa.
+
+***Torstai - Sunnuntai***
+
+Ohjelman ensimmäiset rivit kirjoitettu. Ensin toteutin hätäpysäytys metodin. Kun *touch*-sensoria painetaan poistutaan while -loopista ja pysäytetään moottorit ja valoanturi.
+
+Koodausta, PID säädin algoritmin toteutusta. Robotti on edelleen rakennettuna vain testikunnossa. Eli NXT rungossa on kiinni kaksi moottoria, pyörät ja ääni- sekä kosketusanturi.
