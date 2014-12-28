@@ -22,8 +22,18 @@ BalanssiBotin tapauksessa siis virhe muodostuu erotuksesta mitä saadaan valoant
 
 Alustavaa ideaa koodille siis keksittynä. Muutamia HelloWorld tyylisiä testi ohjelmia ajettu ja testattu, että anturi antaa dataa.
 
-***Torstai - Sunnuntai***
+***Torstai - Lauantai***
 
 Ohjelman ensimmäiset rivit kirjoitettu. Ensin toteutin hätäpysäytys metodin. Kun *touch*-sensoria painetaan poistutaan while -loopista ja pysäytetään moottorit ja valoanturi.
 
 Koodausta, PID säädin algoritmin toteutusta. Robotti on edelleen rakennettuna vain testikunnossa. Eli NXT rungossa on kiinni kaksi moottoria, pyörät ja ääni- sekä kosketusanturi.
+
+Päädyin myös virittelemään valoanturia. Tein anturin ympärille pahvista suojan jota valon vaihtelun saisi pidettyä minimissä. Edelleenkään botti ei pysy sekuntia kauempaa pystyssä. PID arvojen säätäminen on loputon suo.
+
+Sain palautetta, että tätä on yritetty ennekin siinä onnistumatta. Tekee mieli vähän luovuttaa, mutta yritän nyt ainakin tämän viikon deadlineen saakka, sillä koodiakin olen kirjoittanut hiki hatussa läpi joulun.
+
+***Sunnuntai***
+
+Loin viikkoraportti kansioon alakansion ***"viikko2_files"***. Siellä on kuvia robotin kakkosversiosta, jonka purin nyt tänään sunnuntai aamulla. Painopiste 2 versiossa oli liian korkealla toimiakseen. Lähdin rakentamaan 3 versiota aivan alusta niin, että tasapaino olisi mahdollisimman hyvä ja painopiste alhaalla. Koko päivä uudelleen rakentelua, säätöä ja koodausta, lähinnä PID algoritmin virittelyä. "Vers3.jpg" on valmis tuotos mitä testeilin illan. Lopputulos on nähtävillä videoklipissä "balanssibotti.mp4". Ja mitä vielä, botti tasapainoilee noin 5 sekuntia. Nyt kysymys onkin, mitä tästä eteenpäin? Paljonko PID parametrien säädöllä saan bottia tasapainoilemaan paremmin, vai onko tässä optimaalisin tulos tällä valoanturilla? Huomenna maanantaina aion vielä viritellä parametreja.
+
+Toisaalta, voi olla hyvin mahdollista, että tasapainoilu on botin ainoa ominaisuus. Tässä kohtaa tuntuisi tosi vaikelta saada botti tekemään mitään muuta (esim. kontrolloidusti liikkumaan eteen- tai taaksepäin). Omat tavoitteet oli kurssin läpipääsyssä, mutta nyt tuli ehkä tämän botin potentiaali vastaan. Mahtaakohan tämä riittää, jos en saakaan sitä toimimaan paremmin. Onko siis nyt aloitettava uuden toisen botin rakentaminen ja koodaus, ehkä viivan seuraaja niinkuin ehdotettiin? Nyt täytyy hetki miettiä. Ehkä huomenna maanantaina olen viisaampi kun pääsen virittelemään ja testaamaan bottia lisää.
