@@ -1,30 +1,26 @@
 Loppuraportti // Robo-ohjelmoinnin HT
 ====================================
 
-##Lähtökohdat
+##1. Lähtökohdat
 
 TBA
 
-##1. Suunnitelma
+##2. Suunnitelma
 
 TBA
 
-##2. Rakentaminen
+##3. Rakentaminen
 
 TBA
 
-##3. Koodi
+##4. Koodi
 
 TBA
 
-##4. Toteutuminen
+##5. Toteutuminen
 
 TBA
 
-##5. Yhteenveto
+##6. Yhteenveto
 
 TBA
-
-
-
-

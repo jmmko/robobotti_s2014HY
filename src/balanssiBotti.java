@@ -7,7 +7,7 @@ import lejos.nxt.*;
 //import java.io.*;
 
 /**
-******* BALANSSIBOTTI *******
+* BALANSSIBOTTI
 * Itseään tasapainossa pitävä Lego NXT robotti
 * Idea perustuu PID-säätimeen
 *
@@ -32,7 +32,8 @@ public class BalanssiBotti {
   int prev_error;
   float int_error;
 
-  // Alustetaan PID säädin
+
+  // Alustetaan PID kontrolleri
   static int KP;
   static int KI;
   static int KD;
@@ -41,8 +42,6 @@ public class BalanssiBotti {
   static boolean upBoolLeft = true;
   static boolean upBoolRight = true;
 
-  String offsetTxt = "Hae tasapaino!";
-  
   /*  BLUETOOTH varaus (ei käytössä!)
   *
   * String connected = "Yhdistetty";
@@ -59,19 +58,16 @@ public class BalanssiBotti {
 
     // Käynnistetään oranssista napista
     while (!Button.ENTER.isPressed()) {
-
       // Tasapainotetaan manuaalisesti, haetaan offset
       offset = valo.readNormalizedValue();
-
       LCD.clear();
-      LCD.drawInt(offset_txt, 0, 0, 0); // Ohjeteksti
-      LCD.drawInt(offset, 4, 2, 2);  // Offset arvo
-      LCD.drawInt(KP, 4, 0, 0);  // KP parametrin arvo
+      LCD.drawInt(offset, 4, 2, 2);
+      LCD.drawInt(KP, 4, 0, 0);
       LCD.refresh();
     }
   }
 
-  // PID konrtolliarvot
+  // PID kontrolliarvot
   public void pidKontrolli() {
 
     // PID säädin vakiot:
@@ -82,9 +78,9 @@ public class BalanssiBotti {
     KI = 5;
     // 3. Derivative gain, parametri (33)
     KD = 32;
-    // 4. PID skaalaus (18)
-    SCALE = 28;
-    // 5. Tehon kerroin
+    // PID skaalaus (18)
+    SCALE = 22;
+    // Tehon kerroin
     powerScale = 1;
 
     LCD.clear();
@@ -124,6 +120,9 @@ public class BalanssiBotti {
       // PID suhde virhe:
       int error = normVal - offset;
 
+      // Ei välitetetä pienistä virheistä
+      if(Math.abs(error) < 3) error = 0;
+
       // Säädetään saatuja valosensorin arvoja:
       if (error < 0) error = (int)(error * 1.8F);
 
@@ -137,6 +136,7 @@ public class BalanssiBotti {
 
       int pid_val = (int)(KP * error + KI * int_error + KD * deriv_error)/SCALE;
 
+      // Rajoitetaan pid_val välille [-100,100]
       if (pid_val > 100) pid_val = 100;
       if (pid_val < -100) pid_val = -100;
 
@@ -160,11 +160,10 @@ public class BalanssiBotti {
     }
   }
 
-  // Kun hätäkytkintä painettu, sammutetaan robotti
-  public void sammuta() {
+  public void sammuta() {      // Kun hätäkytkintä painettu, sammutetaan robotti
 
     // Sammutetaan moottorit
-    Motor.B.flt();
+    Motor.A.flt();
     Motor.C.flt();
 
     // Sammutetaan valoanturi
@@ -181,3 +180,4 @@ public class BalanssiBotti {
     // Sammutetaan hätäkytkimen painamisen jälkeen
     bot.sammuta();
   }
+}
