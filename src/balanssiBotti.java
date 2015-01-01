@@ -41,6 +41,8 @@ public class BalanssiBotti {
   static boolean upBoolLeft = true;
   static boolean upBoolRight = true;
 
+  String offsetTxt = "Hae tasapaino!";
+  
   /*  BLUETOOTH varaus (ei käytössä!)
   *
   * String connected = "Yhdistetty";
@@ -61,10 +63,10 @@ public class BalanssiBotti {
       // Tasapainotetaan manuaalisesti, haetaan offset
       offset = valo.readNormalizedValue();
 
-      // Piirretään arvo näyttöön
       LCD.clear();
-      LCD.drawInt(offset, 4, 2, 2);
-      LCD.drawInt(KP, 4, 0, 0);
+      LCD.drawInt(offset_txt, 0, 0, 0); // Ohjeteksti
+      LCD.drawInt(offset, 4, 2, 2);  // Offset arvo
+      LCD.drawInt(KP, 4, 0, 0);  // KP parametrin arvo
       LCD.refresh();
     }
   }
