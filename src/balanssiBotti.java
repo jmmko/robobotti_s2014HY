@@ -25,8 +25,6 @@ public class BalanssiBotti {
   // (hätä)kytkin portissa S2
   TouchSensor kytkin = new TouchSensor(SensorPort.S2);
 
-  // Äänisensori portissa S4 (ei käytössä!)
-  // SoundSensor aani = new SoundSensor(SensorPort.S4);
 
   int offset;
   int prev_error;
@@ -58,8 +56,11 @@ public class BalanssiBotti {
 
     // Käynnistetään oranssista napista
     while (!Button.ENTER.isPressed()) {
+
       // Tasapainotetaan manuaalisesti, haetaan offset
       offset = valo.readNormalizedValue();
+
+      // Offset arvo näytölle
       LCD.clear();
       LCD.drawInt(offset, 4, 2, 2);
       LCD.drawInt(KP, 4, 0, 0);
@@ -73,13 +74,13 @@ public class BalanssiBotti {
     // PID säädin vakiot:
 
     // 1. Proportional gain, parametri (28)
-    KP = 25;
+    KP = 28;
     // 2. Integral gain, parametri (4)
-    KI = 5;
+    KI = 4;
     // 3. Derivative gain, parametri (33)
-    KD = 32;
+    KD = 33;
     // PID skaalaus (18)
-    SCALE = 22;
+    SCALE = 18;
     // Tehon kerroin
     powerScale = 1;
 
@@ -121,7 +122,7 @@ public class BalanssiBotti {
       int error = normVal - offset;
 
       // Ei välitetetä pienistä virheistä
-      if(Math.abs(error) < 3) error = 0;
+      // if(Math.abs(error) < 4) error = 0;
 
       // Säädetään saatuja valosensorin arvoja:
       if (error < 0) error = (int)(error * 1.8F);
