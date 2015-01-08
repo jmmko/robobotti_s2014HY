@@ -2,10 +2,6 @@ package robotti;
 
 import lejos.nxt.*;
 
-// BLUETOOTH varaus
-//import lejos.nxt.comm.*;
-//import java.io.*;
-
 /**
 * BALANSSIBOTTI
 * Itseään tasapainossa pitävä Lego NXT robotti
@@ -16,7 +12,6 @@ import lejos.nxt.*;
 * Jouni Koponen
 */
 
-
 public class BalanssiBotti {
 
   // Valoanturi portissa S1
@@ -25,13 +20,9 @@ public class BalanssiBotti {
   // (hätä)kytkin portissa S2
   TouchSensor kytkin = new TouchSensor(SensorPort.S2);
 
-  // Äänisensori portissa S4 (ei käytössä!)
-  // SoundSensor aani = new SoundSensor(SensorPort.S4);
-
   int offset;
   int prev_error;
   float int_error;
-
 
   // Alustetaan PID kontrolleri
   static int KP;
@@ -42,24 +33,15 @@ public class BalanssiBotti {
   static boolean upBoolLeft = true;
   static boolean upBoolRight = true;
 
-  /*  BLUETOOTH varaus (ei käytössä!)
-  *
-  * String connected = "Yhdistetty";
-  * String waiting = "Odotetaan...";
-  * String closing = "Suljetaan...";
-  *
-  * BTConnection btc;
-  *
-  * public DataInputStream dis;
-  * DataOutputStream dos;
-  */
-
   public void haeBalanssi() {
 
     // Käynnistetään oranssista napista
     while (!Button.ENTER.isPressed()) {
+
       // Tasapainotetaan manuaalisesti, haetaan offset
       offset = valo.readNormalizedValue();
+
+      // Offset arvo näytölle
       LCD.clear();
       LCD.drawInt(offset, 4, 2, 2);
       LCD.drawInt(KP, 4, 0, 0);
@@ -73,29 +55,17 @@ public class BalanssiBotti {
     // PID säädin vakiot:
 
     // 1. Proportional gain, parametri (28)
-    KP = 25;
+    KP = 28;
     // 2. Integral gain, parametri (4)
-    KI = 5;
+    KI = 4;
     // 3. Derivative gain, parametri (33)
-    KD = 32;
+    KD = 33;
     // PID skaalaus (18)
-    SCALE = 22;
+    SCALE = 18;
     // Tehon kerroin
     powerScale = 1;
 
     LCD.clear();
-
-    /* BLUETOOTH varaus
-    *
-    * btc = Bluetooth.waitForConnection();
-    *
-    * LCD.clear();
-    * LCD.drawString(connected,0,0);
-    * LCD.refresh();
-    *
-    * dis = btc.openDataInputStream();
-    * dos = btc.openDataOutputStream();
-    */
 
     // Hätäpysäytys kun kytkintä painetaan
     while (!kytkin.isPressed()) {
@@ -111,6 +81,7 @@ public class BalanssiBotti {
         LCD.drawInt(KP, 4, 0, 0);
         upBoolRight = false;
       }
+
       if (!Button.LEFT.isPressed()) upBoolLeft = true;
       if (!Button.RIGHT.isPressed()) upBoolRight = true;
 
@@ -120,15 +91,11 @@ public class BalanssiBotti {
       // PID suhde virhe:
       int error = normVal - offset;
 
-      // Ei välitetetä pienistä virheistä
-      if(Math.abs(error) < 3) error = 0;
-
       // Säädetään saatuja valosensorin arvoja:
       if (error < 0) error = (int)(error * 1.8F);
 
       // PID integraali virhe:
       int_error = ((int_error + error) * 2)/3;
-      //int_error = (int_error*2)/3 + error/3;
 
       // PID derivaatta virhe:
       int deriv_error = error - prev_error;
@@ -145,7 +112,6 @@ public class BalanssiBotti {
 
       power = Math.abs(pid_val); // Teho saadaan PID arvosta:
       power = 55 + (power * 45) / 100; // Normalisoitu teho
-      //power /= 3;
       Motor.A.setSpeed(power*powerScale);
       Motor.C.setSpeed(power*powerScale);
 

@@ -1,26 +1,11 @@
 Loppuraportti // Robo-ohjelmoinnin HT
 ====================================
 
-##1. Lähtökohdat
+"Viimeisellä viikolla kirjoitetaan loppuraportti, missä on tarkoitus tehdä yhteenveto etenemisestään ja arvioida hieman omaa suoritustaan."
 
-TBA
+POISTETTU:
+- bluetooth
+- virheenkorjaus: if(Math.abs(error) < 2) error = 0;
 
-##2. Suunnitelma
-
-TBA
-
-##3. Rakentaminen
-
-TBA
-
-##4. Koodi
-
-TBA
-
-##5. Toteutuminen
-
-TBA
-
-##6. Yhteenveto
-
-TBA
+TEHTY
+- branch merging
