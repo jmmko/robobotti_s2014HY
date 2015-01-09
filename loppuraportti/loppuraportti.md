@@ -6,12 +6,12 @@ Viimeisellä viikolla lähdin toteuttamaan robottiini lisätoiminnallisuuksia. E
 Testasin kolmannen moottorin toimintaa ensin usb yhteyden avulla ja sen jälkeen loin bluetooth yhteyden. Poistin lopullisesta koodista kuitenkin bluetooth yhteyden luomisen, sillä kun ei ollut lopulta mitään toiminnallisuutta. Viikon aikana yritin edelleen optimoida PID-säätimen toimintaa. Sainkin balanssibotin oskillaatiota vähennettyä. Yritin myös toteuttaa virheenkorjausta niin, että jos valoanturin virhe oli vähemmän kuin kolme, se merkittiin nollaksi:
 
 ```java
-if(Math.abs(error) < 2) error = 0;
+if(Math.abs(error) < 3) error = 0;
 ```
 
 En kuitenkaan viimeisellä viikolla saanut bottia tasapainoilemaan niin luotettavasti, että kolmannen moottorin painopisteen siirrolla bottia olisi voinut saada liikuteltua haluttuun suuntaan. Ilmeisesti valoanturi ei anna riittävän tarkkoja lukemia ja siinä esiintyy liiaksi virheitä. Uudemman version värisensori on netistä kaivettujen tietojen mukaan huomattavasti tarkempi ja olisi soveltunut tähän valosensoria paremmin.
 
-Lopulliset kuvat robotista on nähtävillä *"Demo&Dokumentointi/kuvia"* -kansiossa. Kuvat on otettu kun kolmas moottori oli liitetty NXT yksikön päälle. Onnistuin mielestäni rakentamaan robotista rakenteellisesti onnistuneen. Jos muistelemme lähtökohtia, oli omassa laatikossani suhteellisen vähän technics palikoita. Rakensin aluksi kaksi testirobottia, mutta palikoiden puutteiden takia en pystynyt toteuttamaan niitä loppuun. Testirobottien tarkoituksena olikin tutkia mihin olemassa olevilla paloilla voi tehdä. Päädyin siis tekemään jotain sellaista, mikä on toteutettavissa vähillä osilla, mutta joka on kuitenkin tarpeeksi haastava.  
+Lopulliset kuvat robotista on nähtävillä [Demo&Dokumentointi/kuvia](https://github.com/jmmko/robobotti_s2014HY/tree/master/Demo%26Dokumentointi/Kuvia) -kansiossa. Kuvat on otettu kun kolmas moottori oli liitetty NXT yksikön päälle. Yllä yleiskuva robotista. Onnistuin mielestäni rakentamaan robotista rakenteellisesti onnistuneen. Jos muistelemme lähtökohtia, oli omassa laatikossani suhteellisen vähän technics palikoita. Rakensin aluksi kaksi testirobottia, mutta palikoiden puutteiden takia en pystynyt toteuttamaan niitä loppuun. Testirobottien tarkoituksena olikin tutkia mihin olemassa olevilla paloilla voi tehdä. Päädyin siis tekemään jotain sellaista, mikä on toteutettavissa vähillä osilla, mutta joka on kuitenkin tarpeeksi haastava.  
 
 *"Demo&Dokumentointi"* -kansiosta löytyy demovideo. Tämän parempaa suoritukseen en balanssibotin kanssa päässyt. Robotti tasapainoilee noin 5-6 sekuntia. Harjoitustyön alussa olisin ollut pettynyt jos olisin tiennyt ettei robotti pysty parempaan. Nyt kun tiedän vanhan version rajoitteet ja ongelmat tällaisen tasapainoilevan robotin rakentamisessa, olen itseasiassa lopputulokseen ihan tyytyväinen.
 
